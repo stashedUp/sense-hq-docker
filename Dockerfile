@@ -19,6 +19,8 @@ RUN go build -o sense-docker .
 
 WORKDIR /dist
 
+RUN mkdir tmp
+
 VOLUME [ "/dist/tmp" ]
 
 RUN cp /build/sense-docker .
